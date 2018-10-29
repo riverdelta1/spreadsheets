@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~handsontable/dist/handsontable.full.css';
+/* @import "wijmo/styles/wijmo.css";
+
+.App-panel {
+    margin: 0 48pt;
+    text-align: center;
+  }
+  
+.App-panel .wj-control {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+} */
+
+fa {
+  font-size: 26px
+}
