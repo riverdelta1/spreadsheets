@@ -8,8 +8,8 @@
   <fa name="fas fa-save" (click)="iconClickHandle('save')"></fa>
   <fa name="fas fa-print" style="margin-left:10px"></fa>
   <fa name="far fa-calendar" style="margin-left:30px"></fa>
-  <fa name="fas fa-undo" style="margin-left:30px"></fa>
-  <fa name="fas fa-repeat" style="margin-left:10px"></fa>
+  <fa name="fas fa-undo" style="margin-left:30px" (click)="undoPage()"></fa>
+  <fa name="fas fa-repeat" style="margin-left:10px" (click)="redoPage()"></fa>
   <fa name="fas fa-paint-roller"></fa>
   <fa name="fas fa-paint-roller"></fa>
   <fa name="fas fa-print" (click)="printPage()"></fa>
@@ -18,7 +18,7 @@
 <div >
 
 </div>
-<hot-table [colHeaders]="true" minRows= 1000 minCols= 26 colWidths=100 [rowHeaders]="true" [data]="dataset"></hot-table>
+<hot-table [hotId]="hotId" [colHeaders]="true" minRows= 1000 minCols= 26 colWidths=100 [rowHeaders]="true" [data]="dataset"></hot-table>
 
 <!-- <ng-sheet row="1000" column="26" minWidth="70" minHeight="0"></ng-sheet> -->
 <!-- <div class="App-panel">

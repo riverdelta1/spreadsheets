@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CollectionView } from 'wijmo/wijmo';
-
+import { HotTableRegisterer } from '@handsontable/angular'
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,7 +9,17 @@ import { CollectionView } from 'wijmo/wijmo';
 export class AppComponent {
   dataset = [[]]
   title = 'Wijmo Starter App';
+  hotId: string = 'tempID';
+  tableSettings: {};
   data = this.getData();
+  hotInstance : any
+  constructor( private hotRegisterer: HotTableRegisterer){
+    
+  }
+
+  ngOnInit() {
+  }
+
   getData() {
     var countries = 'US,Germany,UK,Japan,Italy,Greece'.split(','),
       data = [];
@@ -32,7 +42,15 @@ export class AppComponent {
     console.log(this.dataset);
   }
 
+  redoPage() {
+    this.hotInstance = this.hotRegisterer.getInstance(this.hotId);
+    this.hotInstance.redo()
+  }
+  undoPage() {
+    this.hotInstance = this.hotRegisterer.getInstance(this.hotId);
+    this.hotInstance.undo()
+  }
   printPage() {
-    window.print();
+    window.print();    
   }
 }
