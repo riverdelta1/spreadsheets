@@ -18,7 +18,17 @@
 <div >
 
 </div>
-<hot-table [hotId]="hotId" [colHeaders]="true" minRows= 1000 minCols= 26 colWidths=100 [rowHeaders]="true" [data]="dataset"></hot-table>
+<hot-table [hotId]="hotId" [colHeaders]="true" minRows= 50 minCols= 26 colWidths=100 [rowHeaders]="true" [data]="dataset"></hot-table>
+<div>
+  <hot-table [hotId]="printHotId" [colHeaders]="false" [maxRows]="printRows+1" [maxCols]="printCols+1" colWidths=100 [rowHeaders]="false" [data]="printDataSet"></hot-table>
+</div>
+<!-- <table id="printHotId" [hidden]="!displayPrintTable">
+  <tr *ngFor="let row of printDataSet;">
+      <td *ngFor="let col of row">{{col}}</td>
+  </tr>
+</table> -->
+<input type="hidden" id="rowRange" name="rowRange" value="0" />
+<input type="hidden" id="colRange" name="colRange" value="0" />
 
 <!-- <ng-sheet row="1000" column="26" minWidth="70" minHeight="0"></ng-sheet> -->
 <!-- <div class="App-panel">
@@ -28,4 +38,3 @@
 <!-- <router-outlet>
 
 </router-outlet> -->
-

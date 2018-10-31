@@ -1,0 +1,43 @@
+table{
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 0;
+  border-width: 0;
+  table-layout: fixed;
+  outline-width: 0;
+  max-width: none;
+  max-height: none;
+  width: auto;
+}
+tr{
+  background: #fff;
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+tr{
+  border-left: 1px solid #CCC;
+}
+td{
+  border-top-width: 0;
+  border-left-width: 0;
+  border-right: 1px solid #CCC;
+  border-bottom: 1px solid #CCC;
+  height: 22px;
+  empty-cells: show;
+  line-height: 21px;
+  padding: 0 4px 0 4px;
+  background-color: #FFF;
+  vertical-align: top;
+  overflow: hidden;
+  outline-width: 0;
+  white-space: pre-line;
+  background-clip: padding-box;
+  width: 93.6px;
+}
+tr:first-child th, tr:first-child td {
+  border-top: 1px solid #CCC;
+}
+td:first-child {
+  border-left: 1px solid #CCC;
+}
