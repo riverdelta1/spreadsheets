@@ -79,10 +79,6 @@ export class AppComponent {
     this.printRows = parseInt($("#rowRange").val());
     this.printCols = parseInt($("#colRange").val());
     let data       = this.hotInstance.getData()
-    // data = data.splice(0,rowRange+1)
-    // for(let i=0;i<=rowRange;i++){
-    //     data[i] = data[i].splice(0,colRange+1)
-    // }
     this.printDataSet = data;
     const options = {
         // modify DOM before print
